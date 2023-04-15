@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Budgety</title>
+        <link rel="stylesheet" href="Style.css">
+    </head>
+
+    <body> 
+        <div class="whole-cont">
+
+            <div class="top">
+
+                <div class="top-contents-cont">
+                    <div class="budget-label">Available Budget in <span id="month"></span> <span id="year"></span></div>
+                    <div class="budget">0.00</div>
+    
+                    <div class="total-inc-cont total-cont">
+                        <div class="total-inc-label total-label">INCOME</div>
+                        <div class="total-inc total">0.00</div>
+                    </div>
+    
+                    <div class="total-exp-cont total-cont">
+                        <div class="total-exp-label total-label">EXPENSE</div>
+                        <div class="total-exp total">0.00</div>
+                        <div class="total-exp-perc">....</div>
+                    </div>
+                </div> 
+
+            </div>
+
+
+            <div class="bottom">
+
+                <div class="input-cont">
+                    <button class="clear-all">
+                        <svg class="svg-icon clear-all-btn-icon">
+                            <use href="./icons.svg#icon__clear-all"></use>
+                        </svg>
+                    </button>
+
+                        
+                    <select name="type" class="type input">
+                        <option value="inc" selected>+</option>
+                        <option value="exp">-</option>
+                    </select>
+                    
+
+                    <input type="text" class="desc input" placeholder="Add Description">
+                    <input type="number" class="val input" placeholder="Value">
+                    <button class="add-btn no-border">
+                        <svg class="svg-icon add-btn-icon">
+                            <use href="./icons.svg#icon__add-btn"></use>
+                        </svg>
+                    </button>
+
+                </div> 
+
+                <div class="items-cont"> 
+                
+                    <div class="inc-cont inc-exp-cont">
+                        <div class="type-label inc-label">INCOMES</div>
+
+                        <div class="items inc-items">
+                            <!-- <div class="inc-list list-items" id="inc-0">
+                                <div class="inc-items-desc items-desc">%description%</div>
+                                <div class="inc-items-val items-val">%value%</div>
+                                <button class="remove-btn"><svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewBox="0 0 20 20">
+                                    <path d="M 10.185 1.417 c -4.741 0 -8.583 3.842 -8.583 8.583 c 0 4.74 3.842 8.582 8.583 8.582 S 18.768 14.74 18.768 10 C 18.768 5.259 14.926 1.417 10.185 1.417 M 10.185 17.68 c -4.235 0 -7.679 -3.445 -7.679 -7.68 c 0 -4.235 3.444 -7.679 7.679 -7.679 S 17.864 5.765 17.864 10 C 17.864 14.234 14.42 17.68 10.185 17.68 M 10.824 10 l 2.842 -2.844 c 0.178 -0.176 0.178 -0.46 0 -0.637 c -0.177 -0.178 -0.461 -0.178 -0.637 0 l -2.844 2.841 L 7.341 6.52 c -0.176 -0.178 -0.46 -0.178 -0.637 0 c -0.178 0.176 -0.178 0.461 0 0.637 L 9.546 10 l -2.841 2.844 c -0.178 0.176 -0.178 0.461 0 0.637 c 0.178 0.178 0.459 0.178 0.637 0 l 2.844 -2.841 l 2.844 2.841 c 0.178 0.178 0.459 0.178 0.637 0 c 0.178 -0.176 0.178 -0.461 0 -0.637 L 10.824 10 Z" ></path>
+                                </svg></button>
+                            </div>
+                            
+                            <div class="inc-list list-items">
+                                <div class="inc-items-desc items-desc">test</div>
+                                <div class="inc-items-val items-val">2000</div>
+                                <button class="remove-btn"><svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewBox="0 0 20 20">
+                                    <path d="M 10.185 1.417 c -4.741 0 -8.583 3.842 -8.583 8.583 c 0 4.74 3.842 8.582 8.583 8.582 S 18.768 14.74 18.768 10 C 18.768 5.259 14.926 1.417 10.185 1.417 M 10.185 17.68 c -4.235 0 -7.679 -3.445 -7.679 -7.68 c 0 -4.235 3.444 -7.679 7.679 -7.679 S 17.864 5.765 17.864 10 C 17.864 14.234 14.42 17.68 10.185 17.68 M 10.824 10 l 2.842 -2.844 c 0.178 -0.176 0.178 -0.46 0 -0.637 c -0.177 -0.178 -0.461 -0.178 -0.637 0 l -2.844 2.841 L 7.341 6.52 c -0.176 -0.178 -0.46 -0.178 -0.637 0 c -0.178 0.176 -0.178 0.461 0 0.637 L 9.546 10 l -2.841 2.844 c -0.178 0.176 -0.178 0.461 0 0.637 c 0.178 0.178 0.459 0.178 0.637 0 l 2.844 -2.841 l 2.844 2.841 c 0.178 0.178 0.459 0.178 0.637 0 c 0.178 -0.176 0.178 -0.461 0 -0.637 L 10.824 10 Z" ></path>
+                                </svg></button>
+                            </div>         -->
+                        </div> 
+                    </div>
+
+                    <div class="exp-cont inc-exp-cont">
+                        <div class="type-label exp-label">EXPENSES</div>
+
+                        <div class="items exp-items">
+                            <!-- <div class="exp-list list-items" id="exp-0">
+                                <div class="exp-items-desc items-desc">test</div>
+                                <div class="exp-items-val items-val">2000</div>
+                                <div class="exp-perc">50%</div>
+                                <button class="remove-btn"><svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewBox="0 0 20 20">
+                                    <path d="M 10.185 1.417 c -4.741 0 -8.583 3.842 -8.583 8.583 c 0 4.74 3.842 8.582 8.583 8.582 S 18.768 14.74 18.768 10 C 18.768 5.259 14.926 1.417 10.185 1.417 M 10.185 17.68 c -4.235 0 -7.679 -3.445 -7.679 -7.68 c 0 -4.235 3.444 -7.679 7.679 -7.679 S 17.864 5.765 17.864 10 C 17.864 14.234 14.42 17.68 10.185 17.68 M 10.824 10 l 2.842 -2.844 c 0.178 -0.176 0.178 -0.46 0 -0.637 c -0.177 -0.178 -0.461 -0.178 -0.637 0 l -2.844 2.841 L 7.341 6.52 c -0.176 -0.178 -0.46 -0.178 -0.637 0 c -0.178 0.176 -0.178 0.461 0 0.637 L 9.546 10 l -2.841 2.844 c -0.178 0.176 -0.178 0.461 0 0.637 c 0.178 0.178 0.459 0.178 0.637 0 l 2.844 -2.841 l 2.844 2.841 c 0.178 0.178 0.459 0.178 0.637 0 c 0.178 -0.176 0.178 -0.461 0 -0.637 L 10.824 10 Z" ></path>
+                                </svg></button>
+                            </div>
+                                
+                            <div class="exp-list list-items">
+                                <div class="exp-items-desc items-desc">test</div>
+                                <div class="exp-items-val items-val">2000</div>
+                                <div class="exp-perc">50%</div>
+                                <button class="remove-btn"><svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewBox="0 0 20 20">
+                                    <path d="M 10.185 1.417 c -4.741 0 -8.583 3.842 -8.583 8.583 c 0 4.74 3.842 8.582 8.583 8.582 S 18.768 14.74 18.768 10 C 18.768 5.259 14.926 1.417 10.185 1.417 M 10.185 17.68 c -4.235 0 -7.679 -3.445 -7.679 -7.68 c 0 -4.235 3.444 -7.679 7.679 -7.679 S 17.864 5.765 17.864 10 C 17.864 14.234 14.42 17.68 10.185 17.68 M 10.824 10 l 2.842 -2.844 c 0.178 -0.176 0.178 -0.46 0 -0.637 c -0.177 -0.178 -0.461 -0.178 -0.637 0 l -2.844 2.841 L 7.341 6.52 c -0.176 -0.178 -0.46 -0.178 -0.637 0 c -0.178 0.176 -0.178 0.461 0 0.637 L 9.546 10 l -2.841 2.844 c -0.178 0.176 -0.178 0.461 0 0.637 c 0.178 0.178 0.459 0.178 0.637 0 l 2.844 -2.841 l 2.844 2.841 c 0.178 0.178 0.459 0.178 0.637 0 c 0.178 -0.176 0.178 -0.461 0 -0.637 L 10.824 10 Z" ></path>
+                                </svg></button>
+                            </div>             -->
+                        </div>
+                    </div>
+    
+                    
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <script src="Script.js"></script>
+    </body>
+</html>
