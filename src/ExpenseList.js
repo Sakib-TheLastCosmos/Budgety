@@ -2,7 +2,7 @@ import React from "react";
 import formatMoney from "./config";
 
 const ExpenseList = ({expenses, deleteItem}) => {
-    const expenseHTML = expenses.map(cur => {
+    const expenseHTML = [...expenses].reverse().map(cur => {
         return (
             <div className="exp-list list-items" key={cur.id}>
                 <div className="exp-items-desc items-desc">{ cur.description }</div>

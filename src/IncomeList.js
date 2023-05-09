@@ -3,7 +3,7 @@ import formatMoney from "./config";
 
 
 const IncomeList = ({incomes, deleteItem}) => {
-    const incomesHTML = incomes.map(cur => {
+    const incomesHTML = [...incomes].reverse().map(cur => {
         return (
             <div className="inc-list list-items" key={cur.id}>
                 <div className="inc-items-desc items-desc">{ cur.description }</div>
